@@ -31,9 +31,4 @@ export class AppComponent {
       reader.readAsDataURL(file);
     }
   }
-
-  byteSize(base64String: string): string {
-    // return this.dataUtils.byteSize(base64String);
-    return '';
-  }
 }

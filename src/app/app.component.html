@@ -6,8 +6,7 @@
       <div class="fileUploadContainer" [ngStyle]="{'margin-top' : editForm.get('photo')!.value ? '5px' :  '20px'}">
         <ng-container *ngIf="editForm.get('photo')!.value">
           <img [src]="editForm.get('photo')!.value" />
-          <button class="deleteButton" mat-icon-button
-            (click)="fileInput.value = ''; editForm.get('photo')?.setValue(null);">
+          <button class="deleteButton" mat-icon-button (click)="fileInput.value = ''; editForm.get('photo')?.setValue(null);">
             <mat-icon>close</mat-icon>
           </button>
         </ng-container>
