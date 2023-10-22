@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UntypedFormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-mat-image-input';
+
+
+  photo: string = '';
+  photoContentType: string = '';
+
+  editForm = this.fb.group({
+    photo: []
+  });
+
+  constructor(private fb: UntypedFormBuilder) { }
+
+
+  setFileData(event: Event): void {
+    const eventTarget: HTMLInputElement | null = event.target as HTMLInputElement | null;
+    if (eventTarget?.files?.[0]) {
+      const file: File = eventTarget.files[0];
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        this.editForm.get('photo')?.setValue(reader.result as string);
+      });
+
+      reader.readAsDataURL(file);
+    }
+  }
+
+  byteSize(base64String: string): string {
+    // return this.dataUtils.byteSize(base64String);
+    return '';
+  }
 }
