@@ -9,9 +9,6 @@ import { UntypedFormBuilder } from '@angular/forms';
 export class AppComponent {
 
 
-  photo: string = '';
-  photoContentType: string = '';
-
   editForm = this.fb.group({
     photo: []
   });
