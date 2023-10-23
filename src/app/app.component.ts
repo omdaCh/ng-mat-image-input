@@ -24,7 +24,6 @@ export class AppComponent {
       reader.addEventListener('load', () => {
         this.editForm.get('photo')?.setValue(reader.result as string);
       });
-
       reader.readAsDataURL(file);
     }
   }

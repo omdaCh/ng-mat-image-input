@@ -1,7 +1,7 @@
 <div style="padding:20px">
   <h1>Angular material image input </h1>
   <form id="editForm" name="editForm" [formGroup]="editForm">
-    <mat-form-field>
+    <mat-form-field appearance="fill">
       <mat-label>Photo</mat-label>
       <div class="fileUploadContainer" [ngStyle]="{'margin-top' : editForm.get('photo')!.value ? '5px' :  '20px'}">
         <ng-container *ngIf="editForm.get('photo')!.value">
@@ -20,7 +20,7 @@
         <input #fileInput class="fileInput" type="file" multiple="multiple" accept="image/*"
           (change)="setFileData($event)" />
       </div>
-      <input matInput formControlName="photo" readonly [hidden]="true " />
+      <input matInput formControlName="photo" [hidden]="true" />
     </mat-form-field>
   </form>
 </div>
