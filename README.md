@@ -1,6 +1,8 @@
 # NgMatImageInput
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+# Read about
+This medium article explain the project https://medium.com/@chemakhi.imad/angula-material-image-input-0daf3ea370f0
 
 ## Development server
 
